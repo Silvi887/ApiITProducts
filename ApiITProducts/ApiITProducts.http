@@ -1,0 +1,6 @@
+@ApiITProducts_HostAddress = http://localhost:5027
+
+GET {{ApiITProducts_HostAddress}}/ShowAllSelectedProducts/
+Accept: application/json
+
+###

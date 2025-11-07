@@ -1,0 +1,154 @@
+[
+  {
+   
+    "name": "LG Evo G5 OLED TV",
+    "producer": "LG",
+    "price": 1996.99,
+    "quantity": 10,
+    "picurl":"https://dmau.imgix.net/media/catalog/product/g/5/g5_65__front_withstand_ayyjcu7hmoh7ucgd.jpg?auto=compress&auto=format&fill=solid&fill-color=FFFFFF&fit=fill&h=279&w=496"
+  },
+  {
+
+    "name": "Hisense U65QF",
+    "producer": "Hisense",
+    "price": 587.99,
+    "quantity": 19,
+    "picurl":"https://cdn.mos.cms.futurecdn.net/v82Xvbhr52u74MQgopE3dB.jpg"
+  },
+  {
+
+    "name": "Samsung S95F",
+    "producer": "Samsung",
+    "price": 2297.99,
+    "quantity": 8,
+    "picurl": "https://cdn.mos.cms.futurecdn.net/v82Xvbhr52u74MQgopE3dB.jpg"
+  },
+  {
+
+    "name": "Roku Pro Series",
+    "producer": "Roku",
+    "price": 798.00,
+    "quantity": 20,
+    "picurl": "https://image.roku.com/blog/wp-content/uploads/2024/01/US-Q1-2024-CES-Prosper-Lifestyle-Hero-Shot-WEB-1-copy.png"
+  },
+  {
+
+    "name": "Amazon Fire TV Omni Mini-LED",
+    "producer": "Amazon",
+    "price": 1089.99,
+    "quantity": 12,
+    "picurl": "https://www.notebookcheck.com/fileadmin/Notebooks/News/_nc4/Fire_TV_Omni_Mini-LED.jpg"
+  },
+  {
+
+    "name": "Apple iPhone 17",
+    "producer": "Apple",
+    "price": 829.99,
+    "quantity": 30,
+    "picurl": "https://www.apple.com/newsroom/images/2025/09/apple-debuts-iphone-17/tile/Apple-iPhone-17-hero-250909-lp.jpg.news_app_ed.jpg"
+  },
+  {
+
+    "name": "Google Pixel 9a",
+    "producer": "Google",
+    "price": 499.00,
+    "quantity": 25,
+    "picurl": "https://www.apple.com/newsroom/images/2025/09/apple-debuts-iphone-17/tile/Apple-iPhone-17-hero-250909-lp.jpg.news_app_ed.jpg"
+  },
+  {
+
+    "name": "Samsung Galaxy S25 Ultra",
+    "producer": "Samsung",
+    "price": 1141.08,
+    "quantity": 18,
+    "picurl": "https://www.apple.com/newsroom/images/2025/09/apple-debuts-iphone-17/tile/Apple-iPhone-17-hero-250909-lp.jpg.news_app_ed.jpg"
+  },
+  {
+
+    "name": "Motorola Razr Ultra",
+    "producer": "Motorola",
+    "price": 1099.99,
+    "quantity": 10,
+    "picurl": "https://www.apple.com/newsroom/images/2025/09/apple-debuts-iphone-17/tile/Apple-iPhone-17-hero-250909-lp.jpg.news_app_ed.jpg"
+  },
+  {
+
+    "name": "OnePlus 13",
+    "producer": "OnePlus",
+    "price": 849.99,
+    "quantity": 22,
+    "picurl": "https://www.apple.com/newsroom/images/2025/09/apple-debuts-iphone-17/tile/Apple-iPhone-17-hero-250909-lp.jpg.news_app_ed.jpg"
+  },
+  {
+
+    "name": "LG Smart InstaView Refrigerator",
+    "producer": "LG",
+    "price": 2999.00,
+    "quantity": 5,
+    "picurl": "https://www.apple.com/newsroom/images/2025/09/apple-debuts-iphone-17/tile/Apple-iPhone-17-hero-250909-lp.jpg.news_app_ed.jpg"
+  },
+  {
+
+    "name": "Electrolux ELFW7537AW Washer",
+    "producer": "Electrolux",
+    "price": 878.00,
+    "quantity": 7,
+    "picurl": "https://www.apple.com/newsroom/images/2025/09/apple-debuts-iphone-17/tile/Apple-iPhone-17-hero-250909-lp.jpg.news_app_ed.jpg"
+  },
+  {
+
+    "name": "KitchenAid French Door Refrigerator",
+    "producer": "KitchenAid",
+    "price": 2000.00,
+    "quantity": 6,
+    "picurl": "https://www.apple.com/newsroom/images/2025/09/apple-debuts-iphone-17/tile/Apple-iPhone-17-hero-250909-lp.jpg.news_app_ed.jpg"
+  },
+  {
+
+    "name": "Samsung Bespoke Washer",
+    "producer": "Samsung",
+    "price": 1198.00,
+    "quantity": 9,
+    "picurl": "https://www.apple.com/newsroom/images/2025/09/apple-debuts-iphone-17/tile/Apple-iPhone-17-hero-250909-lp.jpg.news_app_ed.jpg"
+  },
+  {
+
+    "name": "OLAPLEX Hair Gift Set",
+    "producer": "OLAPLEX",
+    "price": 48.00,
+    "quantity": 50,
+    "picurl": "https://www.apple.com/newsroom/images/2025/09/apple-debuts-iphone-17/tile/Apple-iPhone-17-hero-250909-lp.jpg.news_app_ed.jpg"
+  },
+  {
+
+    "name": "Sol de Janeiro Fragrance Set",
+    "producer": "Sol de Janeiro",
+    "price": 48.00,
+    "quantity": 40,
+    "picurl": "https://www.apple.com/newsroom/images/2025/09/apple-debuts-iphone-17/tile/Apple-iPhone-17-hero-250909-lp.jpg.news_app_ed.jpg"
+  },
+  {
+
+    "name": "Benefit Browminoes Trio",
+    "producer": "Benefit Cosmetics",
+    "price": 36.00,
+    "quantity": 35,
+    "picurl": "https://www.apple.com/newsroom/images/2025/09/apple-debuts-iphone-17/tile/Apple-iPhone-17-hero-250909-lp.jpg.news_app_ed.jpg"
+  },
+  {
+
+    "name": "Kiehl’s Ultra Hydration Duo",
+    "producer": "Kiehl’s",
+    "price": 39.00,
+    "quantity": 45,
+    "picurl": "https://www.apple.com/newsroom/images/2025/09/apple-debuts-iphone-17/tile/Apple-iPhone-17-hero-250909-lp.jpg.news_app_ed.jpg"
+  },
+  {
+
+    "name": "Dyson Airwrap Multi-Styler",
+    "producer": "Dyson",
+    "price": 649.99,
+    "quantity": 12,
+    "picurl": "https://www.apple.com/newsroom/images/2025/09/apple-debuts-iphone-17/tile/Apple-iPhone-17-hero-250909-lp.jpg.news_app_ed.jpg"
+  }
+]

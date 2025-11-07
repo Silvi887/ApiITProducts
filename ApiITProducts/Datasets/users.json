@@ -1,0 +1,30 @@
+[
+  {
+
+    "FirstName": "John",
+    "LastName": "Doe",
+    "DateOfBirth": "1990-05-15",
+    "Town": "New York"
+  },
+  {
+
+    "FirstName": "Anna",
+    "LastName": "Smith",
+    "DateOfBirth": "1985-09-23",
+    "Town": "Sofiya"
+  },
+  {
+
+    "FirstName": "Michael",
+    "LastName": "Brown",
+    "DateOfBirth": "2000-01-10",
+    "Town": "Gabrovo"
+  },
+  {
+
+    "FirstName": null,
+    "LastName": "Taylor",
+    "DateOfBirth": "1995-07-30",
+    "Town": "Plovdiv"
+  }
+]
