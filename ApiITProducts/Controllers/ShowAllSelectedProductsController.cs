@@ -147,7 +147,30 @@ namespace ApiITProducts.Controllers
             return Ok(data);
         }
 
-        [HttpGet(nameof(GetByCategoryMaxPrice))]
+        [HttpGet(nameof(GetAllProducts))]
+        public async Task<IActionResult> GetAllProducts()
+        {
+            var AllProducts = await productcontext.Products
+                .Include(p=> p.CategoriesProducts)
+                .ThenInclude(c=> c.Category)
+                .Select(p=> new
+                {
+                    PName=p.Name,
+                    Quantity=p.Quantity,
+                    PriceProduct=p.Price,
+                    CategoryName= p.CategoriesProducts.FirstOrDefault(n => n.Productid== p.Id).Category.Name,
+                    PicProduct=p.picurl
+                })
+                
+                .ToListAsync();
+
+            var data = JsonConvert.SerializeObject(AllProducts);
+
+            return Ok(data);
+
+        }
+
+            [HttpGet(nameof(GetByCategoryMaxPrice))]
         public async Task<IActionResult> GetByCategoryMaxPrice( string date1, string date2)
         {
 

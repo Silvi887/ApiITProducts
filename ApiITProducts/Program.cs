@@ -19,27 +19,27 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-// Import JSON after app starts
-//using (var scope = app.Services.CreateScope())
-//{
-//    var context = scope.ServiceProvider.GetRequiredService<ProductsContext>();
+////Import JSON after app starts
+using (var scope = app.Services.CreateScope())
+{
+    var context = scope.ServiceProvider.GetRequiredService<ProductsContext>();
 
-//    var projectDir = Directory.GetCurrentDirectory();
-//    var usersJson = File.ReadAllText(Path.Combine(projectDir, "Datasets", "users.json"));
-//    Console.WriteLine(ImportUsers(context, usersJson));
+    var projectDir = Directory.GetCurrentDirectory();
+    var usersJson = File.ReadAllText(Path.Combine(projectDir, "Datasets", "users.json"));
+    Console.WriteLine(ImportUsers(context, usersJson));
 
-//    var categoriesJson = File.ReadAllText(Path.Combine(projectDir, "Datasets", "categories.json"));
-//    Console.WriteLine(ImportCategories(context, categoriesJson));
+    var categoriesJson = File.ReadAllText(Path.Combine(projectDir, "Datasets", "categories.json"));
+    Console.WriteLine(ImportCategories(context, categoriesJson));
 
-//    var productsJson = File.ReadAllText(Path.Combine(projectDir, "Datasets", "products.json"));
-//    Console.WriteLine(ImportProducts(context, productsJson));
+    var productsJson = File.ReadAllText(Path.Combine(projectDir, "Datasets", "products.json"));
+    Console.WriteLine(ImportProducts(context, productsJson));
 
-//    var categoryProductsJson = File.ReadAllText(Path.Combine(projectDir, "Datasets", "categoriesproducts.json"));
-//    Console.WriteLine(ImportCategoryProducts(context, categoryProductsJson));
+    var categoryProductsJson = File.ReadAllText(Path.Combine(projectDir, "Datasets", "categoriesproducts.json"));
+    Console.WriteLine(ImportCategoryProducts(context, categoryProductsJson));
 
-//    var salesJson = File.ReadAllText(Path.Combine(projectDir, "Datasets", "sales.json"));
-//    Console.WriteLine(ImportSalesProducts(context, salesJson));
-//}
+    var salesJson = File.ReadAllText(Path.Combine(projectDir, "Datasets", "sales.json"));
+    Console.WriteLine(ImportSalesProducts(context, salesJson));
+}
 
 
 
