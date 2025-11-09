@@ -30,42 +30,44 @@ namespace ApiITProducts.Controllers
         {
 
             DateTime dt1 = DateTime.ParseExact(date1, "dd-MM-yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None);
-            DateTime dt2 = DateTime.ParseExact(date1, "dd-MM-yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None);
+            DateTime dt2 = DateTime.ParseExact(date2, "dd-MM-yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None);
 
 
-            var result1 = await productcontext.Sales.ToListAsync();
+            //var result1 = await productcontext.Sales.ToListAsync();
             var result= await productcontext.Sales.Where(s => s.SaleDate >= dt1 && s.SaleDate<= dt2)
+                .Include(s => s.Product)
                 .Select(s=>  s.Product.CategoriesProducts.Select(
                     c=> new TopProductsDto
                     {
                         CategoryName=c.Category.Name,
                         ProductName= c.Product.Name,
+                        Dateofsold= s.SaleDate.ToString("dd-MM-yyyy"),
                         TotalSold= s.Quantity
 
-                    }))
+                    })).ToListAsync();
 
-        //    .GroupBy(x => new { x.CategoryName, x.ProductName })
-        //.Select(g => new
-        //{
-        //    g.Key.CategoryName,
-        //    g.Key.ProductName,
-        //    TotalSold = g.Sum(x => x.Quantity)
-        //})
-        //.GroupBy(x => x.CategoryName)
-        //.Select(g => g.OrderByDescending(x => x.TotalSold).FirstOrDefault())
-        //.Select(x => new TopProductDto
-        //{
-        //    CategoryName = x.CategoryName,
-        //    ProductName = x.ProductName,
-        //    TotalSold = x.TotalSold
-        //}
-       // )
-        .ToListAsync();
-
-
+            //    .GroupBy(x => new { x.CategoryName, x.ProductName })
+            //.Select(g => new
+            //{
+            //    g.Key.CategoryName,
+            //    g.Key.ProductName,
+            //    TotalSold = g.Sum(x => x.Quantity)
+            //})
+            //.GroupBy(x => x.CategoryName)
+            //.Select(g => g.OrderByDescending(x => x.TotalSold).FirstOrDefault())
+            //.Select(x => new TopProductDto
+            //{
+            //    CategoryName = x.CategoryName,
+            //    ProductName = x.ProductName,
+            //    TotalSold = x.TotalSold
+            //}
+            // )
+            //.ToListAsync();
 
 
-            var data = JsonConvert.SerializeObject(result1);
+
+
+            var data = JsonConvert.SerializeObject(result);
             return Ok(data);
 
 
@@ -110,6 +112,35 @@ namespace ApiITProducts.Controllers
                    Product= s.Product.Name,
                    Price= s.TotalPrice
 
+                }).ToListAsync();
+
+            var data = JsonConvert.SerializeObject(result);
+            return Ok(data);
+        }
+
+        [HttpGet(nameof(GetMaxSoldPeriodByTown))]
+        public async Task<IActionResult> GetMaxSoldPeriodByTown( string date1, string date2)
+        {
+
+            DateTime dt1 = DateTime.ParseExact(date1, "dd-MM-yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None);
+            DateTime dt2 = DateTime.ParseExact(date2, "dd-MM-yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None);
+
+
+
+            var result = await productcontext.Sales.Where(s => s.SaleDate >= dt1 && s.SaleDate <= dt2)
+                .Include(u => u.User)
+               // group by town name
+                .Select(s => new
+                {
+                    Town = s.User.Town,
+                    DateSale = s.SaleDate,    // sum of products sold
+                    TotalSold = s.TotalPrice, // optional: sum of revenue
+                    SalesCount = s.Quantity
+
+                    //Town = g.Key,
+                    //TotalSold = g.Sum(s => s.Quantity),    // sum of products sold
+                    //TotalRevenue = g.Sum(s => s.TotalPrice), // optional: sum of revenue
+                    //SalesCount = g.Count()                 // optional: number of sales
                 }).ToListAsync();
 
             var data = JsonConvert.SerializeObject(result);
